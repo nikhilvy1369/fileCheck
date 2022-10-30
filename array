@@ -1,0 +1,39 @@
+#!/bin/bash
+
+declare -a arrPics
+
+for file in *.jpg
+do
+    arrPics=(${arrPics[*]} "$file")
+done
+
+# Using [@]
+echo -e '\nUsing [@] -----------------------------------'
+for item in "${arrPics[@]}"
+do
+    echo "ITEM: *** $item ***"
+done
+
+# Using [*]
+echo -e '\nUsing [*] -----------------------------------'
+for item in "${arrPics[*]}"
+do
+    echo "ITEM: *** $item ***"
+done
+
+
+
+
+echo "${arrPics[@]}"
+
+P1240738.jpg P1240739.jpg P1240741.jpg P1240742.jpg P1240744.jpg P1240747.jpg P1240749.jpg P1240750.jpg P1240751.jpg P1240752.jpg P1240753.jpg P1240754.jpg P1240755.jpg P1240756.jpg P1240757.jpg P1240758.jpg
+
+echo "${arrPics[*]}"
+
+P1240738.jpg P1240739.jpg P1240741.jpg P1240742.jpg P1240744.jpg P1240747.jpg P1240749.jpg
+
+
+
+
+Deleting the Array
+unset arrPics
